@@ -1,0 +1,17 @@
+<interface version="1">
+  <node name="mode manager" executable="mode_manager">
+    <parameter name="modelfile" type="string" />
+    <topic name="/parameter_events" type="rcl_interfaces/msg/ParameterEvent" subscription="true" />
+
+    <!-- todo(anordman): what about the dynamic services and topics? -->
+    <topic name="/parameter_events" type="rcl_interfaces/msg/ParameterEvent" subscription="true" />
+  </node>
+
+  <node name="mode monitor" executable="mode_monitor">
+    <parameter name="modelfile" type="string" />
+    <topic name="/parameter_events" type="rcl_interfaces/msg/ParameterEvent" subscription="true" />
+
+    <!-- todo(anordman): what about the dynamic services and topics? -->
+    <topic name="/parameter_events" type="rcl_interfaces/msg/ParameterEvent" subscription="true" />
+  </node>
+</interface>

@@ -17,6 +17,7 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(ament_nodl REQUIRED)
 find_package(builtin_interfaces REQUIRED)
 find_package(std_msgs REQUIRED)
 find_package(rclcpp REQUIRED)
@@ -142,4 +143,6 @@ ament_export_dependencies(rclcpp)
 ament_export_dependencies(rclcpp_lifecycle)
 ament_export_dependencies(lifecycle_msgs)
 ament_export_dependencies(std_msgs)
+
+nodl_export_node_description_file(package.nodl.xml)
 ament_package()
