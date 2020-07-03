@@ -17,6 +17,7 @@ endif()
 
 # find dependencies
 find_package(ament_cmake REQUIRED)
+find_package(ament_nodl REQUIRED)
 find_package(rclcpp REQUIRED)
 find_package(rcl_lifecycle REQUIRED)
 find_package(rclcpp_lifecycle REQUIRED)
@@ -74,4 +75,5 @@ install(FILES example_modes.yaml
 )
 install(DIRECTORY launch DESTINATION share/${PROJECT_NAME}/)
 
+nodl_export_node_description_file(package.nodl.xml)
 ament_package()

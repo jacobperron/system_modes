@@ -1,0 +1,10 @@
+<interface version="1">
+  <node name="manipulator" executable="manipulator">
+    <parameter name="max_torque" type="double" />
+  </node>
+
+  <node name="drive_base" executable="drive_base">
+    <parameter name="max_speed" type="double" />
+    <parameter name="controler" type="string" />
+  </node>
+</interface>
